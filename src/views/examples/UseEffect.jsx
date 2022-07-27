@@ -11,6 +11,7 @@ function calcFatorial(num) {
 
 // UseEffect efeito colateral
 const UseEffect = (props) => {
+    // Ex #01
     const [number, setNumber] = useState(1);
     const [fatorial, setFatorial] = useState(1);
 
@@ -23,6 +24,13 @@ const UseEffect = (props) => {
             document.title = "Eita!!!"
         }
     }, [fatorial])
+
+    // Ex #02
+    const [status, setStatus] = useState("Ìmpar");
+    // Par ou Ìmpar
+    useEffect(function () {
+        setStatus(number % 2 === 0 ? "Par" : "Ìmpar");
+    }, [number])
 
     return (
         <div className="UseEffect">
@@ -39,8 +47,14 @@ const UseEffect = (props) => {
                     onChange={e => setNumber(e.target.value)} />
             </div>
 
-            <SectionTitle title="Exercício #02"/>
-            <div className="center"></div>
+            <SectionTitle title="Exercício #02" />
+            <div className="center">
+                <div>
+                    <span className="text">Status: </span>
+                    <span className="text red">{status}</span>
+                </div>
+
+            </div>
 
 
         </div>
