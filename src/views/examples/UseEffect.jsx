@@ -1,3 +1,7 @@
+/* useEffect() efeitos colaterais dentro de uma function Callback. que tem um array de depedencia. 
+    quais são as depedencias que vão disparar aquela Calback. para gerar o efeito colateral
+*/
+
 import React, { useEffect, useState } from 'react'
 import PageTitle from '../../components/layout/PageTitle'
 import SectionTitle from '../../components/layout/SectionTitle'
